@@ -1,4 +1,4 @@
-package com.company;
+package application;
 
 /**
  * Created by Max on 16-01-22.

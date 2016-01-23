@@ -1,4 +1,4 @@
-package com.company;
+package application;
 
 /**
  * Created by Max on 16-01-23.
@@ -24,5 +24,9 @@ public class Act {
 
     public Scene getScene(int i) {
         return scenes[i];
+    }
+
+    public Scene[] getScenes() {
+        return scenes;
     }
 }
