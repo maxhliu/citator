@@ -35,14 +35,15 @@ public class Main extends Application {
                     getClass().getResource("application.css").toExternalForm());
 
             // Configure
-            ListView textList = new ListView();
-            ObservableList<Line> lines = FXCollections.observableArrayList();
+            ListView<TextListCell> textList = new ListView<TextListCell>();
+            ObservableList<TextListCell> lines = FXCollections
+                    .observableArrayList();
+            lines.add(() -> "ha");
+            lines.add(() -> "moo");
+            lines.add(() -> "foo");
+            lines.add(() -> "bar");
             textList.setItems(lines);
-
-            TextArea ta = configureTextArea();
-            root.setCenter(ta);
-            String text = loadText();
-            ta.setText(text);
+            FXUtilities.setCellNames(textList, (TextListCell c) -> c.getText());
 
             primaryStage.setTitle("Citator");
             primaryStage.setScene(scene);
