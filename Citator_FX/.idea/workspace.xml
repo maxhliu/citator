@@ -2,50 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a69aff8-8efa-4264-b045-c7c6bd5db1f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/a_and_c.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/all_well.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/as_you.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/com_err.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/coriolan.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/cymbelin.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/dream.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/dsssl.dtd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/fot.dtd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/hamlet.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/hen_iv_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/hen_iv_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/hen_v.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/hen_vi_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/hen_vi_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/hen_vi_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/hen_viii.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/j_caesar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/john.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/lear.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/lll.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/m_for_m.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/m_wives.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/macbeth.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/merchant.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/much_ado.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/othello.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/pericles.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/play.dtd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/r_and_j.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/rich_ii.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/rich_iii.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/style-sheet.dtd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/t_night.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/taming.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/tempest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/timon.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/titus.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/troilus.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/two_gent.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmlFiles/win_tale.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Act.java" afterPath="$PROJECT_DIR$/src/application/Act.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Parse.java" afterPath="$PROJECT_DIR$/src/application/Parse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Scene.java" afterPath="$PROJECT_DIR$/src/application/Scene.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/RootController.java" afterPath="$PROJECT_DIR$/src/application/RootController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/SceneArea.java" afterPath="$PROJECT_DIR$/src/application/SceneArea.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/root.fxml" afterPath="$PROJECT_DIR$/src/application/root.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Citator_FX.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,49 +44,29 @@
         <entry file="file://$PROJECT_DIR$/src/application/root.fxml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parse.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Parse.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/Parse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5031546">
-              <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RootController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RootController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/RootController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8411215">
+              <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvokeLaterDispatcher.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/javafx-src.zip!/com/sun/glass/ui/InvokeLaterDispatcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#5989#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#1268#1278#0" expanded="false" />
-                <element signature="e#2425#2426#0" expanded="false" />
-                <element signature="e#2466#2467#0" expanded="false" />
-                <element signature="e#2657#2658#0" expanded="false" />
-                <element signature="e#2692#2693#0" expanded="false" />
-                <element signature="e#4979#4980#0" expanded="false" />
-                <element signature="e#5017#5018#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -187,10 +127,20 @@
         <entry file="file://$PROJECT_DIR$/src/application/SceneArea.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hamlet.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hamlet.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -224,11 +174,11 @@
         <option value="$PROJECT_DIR$/hamlet.xml" />
         <option value="$PROJECT_DIR$/src/application/Line.java" />
         <option value="$PROJECT_DIR$/src/application/Act.java" />
+        <option value="$PROJECT_DIR$/src/application/Main.java" />
+        <option value="$PROJECT_DIR$/src/application/Parse.java" />
         <option value="$PROJECT_DIR$/src/application/SceneArea.java" />
         <option value="$PROJECT_DIR$/src/application/root.fxml" />
-        <option value="$PROJECT_DIR$/src/application/Main.java" />
         <option value="$PROJECT_DIR$/src/application/RootController.java" />
-        <option value="$PROJECT_DIR$/src/application/Parse.java" />
       </list>
     </option>
   </component>
@@ -684,11 +634,17 @@
       <option name="project" value="LOCAL" />
       <updated>1453575367220</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge branches 'master' and 'parse' of https://github.com/matresscow/citator into ui&#10;&#10;# Conflicts:&#10;#&#9;Citator_FX/.idea/workspace.xml&#10;#&#9;Citator_FX/bin/application/Act.class&#10;#&#9;Citator_FX/bin/application/Main.class&#10;#&#9;Citator_FX/bin/application/Scene.class&#10;">
+      <created>1453583623785</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1453583623785</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12740000" />
+    <option name="totallyTimeSpent" value="16790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -704,7 +660,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997344" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12084994" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12084994" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32669324" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -712,7 +668,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26484376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25232404" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25232404" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -725,9 +681,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Max wanted me to push" />
     <MESSAGE value="Extended TextArea to accomodate Acts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extended TextArea to accomodate Acts" />
+    <MESSAGE value="Merge branches 'master' and 'parse' of https://github.com/matresscow/citator into ui&#10;&#10;# Conflicts:&#10;#&#9;Citator_FX/.idea/workspace.xml&#10;#&#9;Citator_FX/bin/application/Act.class&#10;#&#9;Citator_FX/bin/application/Main.class&#10;#&#9;Citator_FX/bin/application/Scene.class&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branches 'master' and 'parse' of https://github.com/matresscow/citator into ui&#10;&#10;# Conflicts:&#10;#&#9;Citator_FX/.idea/workspace.xml&#10;#&#9;Citator_FX/bin/application/Act.class&#10;#&#9;Citator_FX/bin/application/Main.class&#10;#&#9;Citator_FX/bin/application/Scene.class&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -754,17 +713,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#5989#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1268#1278#0" expanded="false" />
-            <element signature="e#2425#2426#0" expanded="false" />
-            <element signature="e#2466#2467#0" expanded="false" />
-            <element signature="e#2657#2658#0" expanded="false" />
-            <element signature="e#2692#2693#0" expanded="false" />
-            <element signature="e#4979#4980#0" expanded="false" />
-            <element signature="e#5017#5018#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -961,14 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hamlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/StageDirection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1004,6 +945,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1024,44 +975,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#5989#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1268#1278#0" expanded="false" />
-            <element signature="e#2425#2426#0" expanded="false" />
-            <element signature="e#2466#2467#0" expanded="false" />
-            <element signature="e#2657#2658#0" expanded="false" />
-            <element signature="e#2692#2693#0" expanded="false" />
-            <element signature="e#4979#4980#0" expanded="false" />
-            <element signature="e#5017#5018#0" expanded="false" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Parse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hamlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/SceneArea.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/RootController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1071,16 +1008,18 @@
     <entry file="file://$PROJECT_DIR$/src/application/root.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Parse.java">
+    <entry file="file://$PROJECT_DIR$/src/application/RootController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5031546">
-          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
-          <folding />
+        <state vertical-scroll-proportion="0.8411215">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

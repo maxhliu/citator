@@ -1,10 +1,21 @@
 <?import javafx.scene.control.ScrollPane?>
 
 <?import javafx.scene.layout.VBox?>
-<ScrollPane fx:controller="application.RootController"
-          xmlns:fx="http://javafx.com/fxml" hbarPolicy="NEVER" vbarPolicy="ALWAYS">
-    <content>
-        <VBox fx:id="vBox">
-        </VBox>
-    </content>
-</ScrollPane>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TextArea?>
+<?import application.SceneArea?>
+<?import javafx.scene.control.TreeView?>
+<BorderPane fx:controller="application.RootController"
+          xmlns:fx="http://javafx.com/fxml">
+
+    <top>
+
+    </top>
+    <center>
+        <TextArea fx:id="textArea" editable="false" onKeyReleased="#onKeyReleased"></TextArea>
+    </center>
+
+    <left>
+        <TreeView fx:id="treeView"></TreeView>
+    </left>
+</BorderPane>
