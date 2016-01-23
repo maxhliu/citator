@@ -35,7 +35,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             BorderPane root = new BorderPane();
-            javafx.Scene scene = new javafx.Scene(root, 600, 600);
+            javafx.scene.Scene scene = new javafx.scene.Scene(root, 600, 600);
             scene.getStylesheets().add(
                     getClass().getResource("application.css").toExternalForm());
 
