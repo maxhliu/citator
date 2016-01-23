@@ -12,10 +12,11 @@ public class Scene {
     private String title;
     private String actNumber;
 
-    public Scene(String title, List<Line> lines) {
+    public Scene(String title, List<Line> lines, String actNumber) {
         this.title = title;
         sceneNumber = title.split(" ")[1].replaceAll("\\.", "");
         this.lines = lines;
+        this.actNumber = actNumber;
     }
 
     public String getSceneNumber() {
@@ -30,9 +31,9 @@ public class Scene {
         return actNumber;
     }
 
-    public void setActNumber(String actNumber) {
-        this.actNumber = actNumber;
-    }
+//    public void setActNumber(String actNumber) {
+//        this.actNumber = actNumber;
+//    }
 
     public List<Line> getLines() {
         return lines;
