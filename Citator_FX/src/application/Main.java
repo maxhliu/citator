@@ -1,7 +1,20 @@
 package application;
 
+import java.io.File;
+import java.io.IOException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.xml.sax.SAXException;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
@@ -19,27 +32,16 @@ public class Main extends Application {
             scene.getStylesheets().add(
                     getClass().getResource("application.css").toExternalForm());
 
-            TextArea textArea = new TextArea();
-            textArea.setText("lolloll\njklsdjfjsa\nto bae or not 2 bay");
-            textArea.setEditable(false);
-            root.setCenter(textArea);
-            
-            Clipboard cb = Clipboard.getSystemClipboard();
-            ClipboardContent content = new ClipboardContent();
-            cb.setContent(content);
-            
-            textArea.requestFocus();
-            
-            textArea.setOnKeyReleased((evt) -> {
-                if(evt.isShortcutDown() && evt.getCode() == KeyCode.C) {
-                    String selected = cb.getContent(DataFormat.PLAIN_TEXT).toString();
-                    String edited = "\"" + selected + "\" (6.9.69)";
-                    content.putString(edited);
-                    content.putHtml("bold: <b>" + edited + "</b>");
-                    cb.setContent(content);
-                }    
-            });
-            
+            // Configure
+            ListView textList = new ListView();
+            // ObservableList<Line> str
+            // textList.setItems(value);
+
+            TextArea ta = configureTextArea();
+            root.setCenter(ta);
+            String text = loadText();
+            ta.setText(text);
+
             primaryStage.setTitle("Citator");
             primaryStage.setScene(scene);
             primaryStage.show();
@@ -47,6 +49,46 @@ public class Main extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private TextArea configureTextArea() {
+        TextArea textArea = new TextArea();
+        textArea.setText("lolloll\njklsdjfjsa\nto bae or not 2 bay");
+        textArea.setEditable(false);
+
+        Clipboard cb = Clipboard.getSystemClipboard();
+        ClipboardContent content = new ClipboardContent();
+        cb.setContent(content);
+
+        textArea.requestFocus();
+
+        textArea.setOnKeyReleased((evt) -> {
+            if (evt.isShortcutDown() && evt.getCode() == KeyCode.C) {
+                String selected = cb.getContent(DataFormat.PLAIN_TEXT)
+                        .toString();
+                String edited = "\"" + selected + "\" (2.3.23)"; // TODO
+                content.putString(edited);
+                content.putHtml("bold: <b>" + edited + "</b>");
+                cb.setContent(content);
+            }
+        });
+        return textArea;
+    }
+
+    private String loadText()
+            throws SAXException, IOException, ParserConfigurationException {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        File xmlFile = new File("hamlet.xml");
+        Document doc = builder.parse(xmlFile);
+        Element root = doc.getDocumentElement();
+        String txt = parseText(root, "");
+        return txt;
+    }
+
+    private String parseText(Node root, String text) {
+
+        return root.getNodeName() + " " + root.getNodeValue();
     }
 
     public static void main(String[] args) {
