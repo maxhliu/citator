@@ -2,14 +2,20 @@ package application;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import javafx.application.Application;
@@ -34,16 +40,22 @@ public class Main extends Application {
             scene.getStylesheets().add(
                     getClass().getResource("application.css").toExternalForm());
 
-            // Configure
-            ListView<TextListCell> textList = new ListView<TextListCell>();
-            ObservableList<TextListCell> lines = FXCollections
-                    .observableArrayList();
-            lines.add(() -> "ha");
-            lines.add(() -> "moo");
-            lines.add(() -> "foo");
-            lines.add(() -> "bar");
-            textList.setItems(lines);
-            FXUtilities.setCellNames(textList, (TextListCell c) -> c.getText());
+            SceneArea ta = new SceneArea();
+            ta.setText("aaaa\naaaaaa\naaaaaaa\naaaaaaa");
+            ta.actNum = 1;
+            ta.sceneNum = 2;
+            SceneArea t2 = new SceneArea();
+            t2.setText("bbbbb\nbbbbbb\nbbbbb\nbbbbbb");
+            t2.actNum = 3;
+            t2.sceneNum = 4;
+            VBox vBox = new VBox();
+            vBox.getChildren().addAll(ta, t2);
+            root.setCenter(vBox);
+
+            List<Act> acts = new ArrayList<>();
+            configureText(vBox, acts);
+
+            loadText();
 
             primaryStage.setTitle("Citator");
             primaryStage.setScene(scene);
@@ -54,28 +66,17 @@ public class Main extends Application {
         }
     }
 
-    private TextArea configureTextArea() {
-        TextArea textArea = new TextArea();
-        textArea.setText("lolloll\njklsdjfjsa\nto bae or not 2 bay");
-        textArea.setEditable(false);
-
-        Clipboard cb = Clipboard.getSystemClipboard();
-        ClipboardContent content = new ClipboardContent();
-        cb.setContent(content);
-
-        textArea.requestFocus();
-
-        textArea.setOnKeyReleased((evt) -> {
-            if (evt.isShortcutDown() && evt.getCode() == KeyCode.C) {
-                String selected = cb.getContent(DataFormat.PLAIN_TEXT)
-                        .toString();
-                String edited = "\"" + selected + "\" (2.3.23)"; // TODO
-                content.putString(edited);
-                content.putHtml("bold: <b>" + edited + "</b>");
-                cb.setContent(content);
+    private void configureText(VBox vBox, List<Act> acts) {
+        for(Act a : acts) {
+            SceneArea sceneArea = new SceneArea();
+            for(Scene s : a.getScenes()) {
+                sceneArea.addScene(s);
+                for(Line l : s.getLines()) {
+                    sceneArea.addLine(l);
+                }
             }
-        });
-        return textArea;
+            vBox.getChildren().add(sceneArea);
+        }
     }
 
     private String loadText()
@@ -85,13 +86,19 @@ public class Main extends Application {
         File xmlFile = new File("hamlet.xml");
         Document doc = builder.parse(xmlFile);
         Element root = doc.getDocumentElement();
-        String txt = parseText(root, "");
-        return txt;
+        return parseText(root);
     }
 
-    private String parseText(Node root, String text) {
+    private String parseText(Node root) {
 
-        return root.getNodeName() + " " + root.getNodeValue();
+        System.out.println(root.getNodeName() + " " + root.getTextContent());
+        NodeList nList = root.getChildNodes();
+        for(int i = 0; i < nList.getLength(); i++) {
+            Node n = nList.item(i);
+            System.out.println(n.getNodeName());
+        }
+
+        return "";
     }
 
     public static void main(String[] args) {

@@ -17,7 +17,7 @@ public class FXUtilities {
      * @param func
      * @author matthewriley
      */
-    public static <T> void setCellNames(ListView<T> listView,
+    public static <T> void setCelllNames(ListView<T> listView,
             Function<T, String> func) {
 
         listView.setCellFactory(new Callback<ListView<T>, ListCell<T>>() {
