@@ -21,7 +21,6 @@ import org.xml.sax.SAXException;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.Clipboard;
@@ -36,7 +35,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             BorderPane root = new BorderPane();
-            Scene scene = new Scene(root, 600, 600);
+            javafx.Scene scene = new javafx.Scene(root, 600, 600);
             scene.getStylesheets().add(
                     getClass().getResource("application.css").toExternalForm());
 
