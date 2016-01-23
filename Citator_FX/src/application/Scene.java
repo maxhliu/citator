@@ -1,8 +1,5 @@
 package application;
 
-import java.util.LinkedList;
-import java.util.List;
-
 /**
  * Created by Max on 16-01-22.
  */
@@ -36,5 +33,9 @@ public class Scene {
 
     public void setActNumber(String actNumber) {
         this.actNumber = actNumber;
+    }
+
+    public Line[] getLines() {
+        return lines;
     }
 }

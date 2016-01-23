@@ -25,4 +25,8 @@ public class Act {
     public Scene getScene(int i) {
         return scenes[i];
     }
+
+    public Scene[] getScenes() {
+        return scenes;
+    }
 }
