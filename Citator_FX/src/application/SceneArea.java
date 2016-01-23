@@ -11,12 +11,32 @@ import javafx.scene.input.KeyCode;
  */
 public class SceneArea extends TextArea {
 
-    public int actNum, sceneNum;
+    public String actNum, sceneNum;
 
-    public SceneArea() {
+    public SceneArea(Scene scene) {
         super();
         setEditable(false);
 
+        // Set the txt to the scene text
+        String txt = "Act " + scene.getActNumber() + ", " + scene.getTitle() + "\n\n";
+        System.out.flush();
+        for (Line l : scene.getLines()) {
+            if (l.isSpeech()) {
+                // TODO: use String.format to keep the line number right-justfied
+                Speech speech = (Speech) l;
+                txt += speech.getSpeaker();
+                txt += "\n" + speech.getText();
+                txt += "  " + speech.getLineNumber();
+            } else {
+                StageDirection stageDirection = (StageDirection) l;
+                txt += stageDirection.getText() + "   " + stageDirection.getLineNumber();
+            }
+            txt += "\n";
+        }
+        setText(txt);
+
+        // Set the copying ability
+        // TODO: use Andrew's code later
         setOnKeyReleased((evt) -> {
             if (evt.isShortcutDown() && evt.getCode() == KeyCode.C) {
 
@@ -33,31 +53,9 @@ public class SceneArea extends TextArea {
                 cb.setContent(content);
             }
         });
-    }
 
-    public void addScene(Scene s) {
-
-        String txt = getText();
-        txt += "\n\n";
-        txt += "Act " + s.getActNumber() + ", Scene " + s.getSceneNumber();
-        txt += s.getTitle();
-        setText(txt);
-    }
-
-    public void addLine(Line l) {
-        String txt = getText();
-        txt += "\n";
-
-        if(l.isSpeech()) {
-            // TODO: use String.format to keep the line number right-justfied
-            Speech speech = (Speech) l;
-            txt += speech.getSpeaker();
-            txt += "\n" + speech.getText();
-            txt += "  " + speech.getLineNumber();
-        } else {
-            StageDirection stageDirection = (StageDirection) l;
-            txt += stageDirection.getText() + "   " + stageDirection.getLineNumber();
-        }
-        setText(txt);
+        // Size to the contents
+        setMinHeight(1000);
+        //autosize();
     }
 }
