@@ -1,4 +1,7 @@
-package application;
+package com.company;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Max on 16-01-22.
@@ -7,6 +10,7 @@ public class Scene {
     private Line lines[];
     private String sceneNumber;
     private String title;
+    private String actNumber;
 
     public Scene(String title, Line[] lines) {
         this.title = title;
@@ -24,5 +28,13 @@ public class Scene {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getActNumber() {
+        return actNumber;
+    }
+
+    public void setActNumber(String actNumber) {
+        this.actNumber = actNumber;
     }
 }
