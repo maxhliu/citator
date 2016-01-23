@@ -48,7 +48,7 @@ public class Parse {
         return returnNodes;
     }
 
-    public static void parseXML() throws ParserConfigurationException, IOException, SAXException {
+    public static List<Act> parseXML() throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setIgnoringElementContentWhitespace(true);
         DocumentBuilder builder = factory.newDocumentBuilder();
@@ -60,10 +60,27 @@ public class Parse {
         List<Line> lines = new ArrayList<>();
 
         List<Node> nodeActs = findChildNodesByName(root, "ACT");
-        for (Node n : nodeActs) {
-            List<Node> nodeScenes = findChildNodesByName(root, "SCENE");
+        int lineNumber = 0;
+        for (Node n1 : nodeActs) {
+            List<Node> nodeScenes = findChildNodesByName(n1, "SCENE");
+            for (Node n2 : nodeScenes) {
+                List<Node> nodeLines = findChildNodesByName(n2, "SPEECH", "STAGEDIR");
 
+                for (Node n3 : nodeLines) {
+                    if (n3.getNodeName().equals("SPEECH")) {
+                        lines.add(new Speech(n3.getFirstChild().getTextContent(),
+                                n3.getLastChild().getTextContent(), lineNumber++));
+                    } else {
+                        lines.add(new StageDirection(n3.getFirstChild().getTextContent(), lineNumber++));
+                    }
+                }
+                scenes.add(new Scene(n2.getFirstChild().getTextContent(), lines));
+
+            }
+            acts.add(new Act(n1.getFirstChild().getTextContent(), scenes));
+            lineNumber = 0;
         }
+        return acts;
     }
 
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
