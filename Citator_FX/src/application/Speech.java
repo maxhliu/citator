@@ -1,4 +1,4 @@
-package com.company;
+package application;
 
 /**
  * Created by Max on 16-01-22.
@@ -6,6 +6,7 @@ package com.company;
 public class Speech extends Line {
     private String speaker;
     private String text;
+
     public Speech(String speaker, String text, int lineNumber) {
         this.speaker = speaker;
         this.text = text;

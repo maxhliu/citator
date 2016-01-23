@@ -13,6 +13,8 @@ import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
@@ -34,8 +36,8 @@ public class Main extends Application {
 
             // Configure
             ListView textList = new ListView();
-            // ObservableList<Line> str
-            // textList.setItems(value);
+            ObservableList<Line> lines = FXCollections.observableArrayList();
+            textList.setItems(lines);
 
             TextArea ta = configureTextArea();
             root.setCenter(ta);
