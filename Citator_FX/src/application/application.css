@@ -2,11 +2,25 @@
 
 .root {
     -fx-font-size: 12pt;
-    -fx-font-family: "Helvetica Neue";
-    -fx-base: rgb(50, 50, 50);
-    -fx-background-color: lightsteelblue;
+    -fx-font-family: "Consolas";
+    /*-fx-base: rgb(50, 50, 50);
+    -fx-background-color: lightsteelblue; */
 }
 
-.list-view {
+.border-pane {
+    -fx-padding: 10;
+}
 
+.stack-pane {
+    -fx-padding: 10;
+}
+
+.vbox {
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+.hbox {
+    -fx-padding: 10;
+    -fx-spacing: 10;
 }

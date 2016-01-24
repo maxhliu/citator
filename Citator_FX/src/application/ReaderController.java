@@ -3,6 +3,7 @@ package application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.ScrollBar;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
@@ -31,10 +32,6 @@ public class ReaderController {
     @FXML
     private TreeView treeView;
 
-    @FXML
-    protected void initialize() {
-    }
-
     public void initViewer(String playName, String fileName) {
 
         // Parse the play into a list of acts
@@ -50,57 +47,64 @@ public class ReaderController {
         // Init the treeView
         TreeItem<String> root = new TreeItem<>();
         root.setExpanded(true);
-        for(Act a : acts) {
-            String actName = String.format("Act %5s", a.getActNumber());
+        for (Act a : acts) {
+            String actName = String.format("Act %3s", a.getActNumber());
             TreeItem<String> actItem = new TreeItem<>(actName);
             root.getChildren().add(actItem);
-            for(Scene s : a.getScenes()) {
-                String sceneName = String.format("Scene %5s", s.getSceneNumber());
+            for (Scene s : a.getScenes()) {
+                String sceneName = String.format("Scene %3s", s.getSceneNumber());
                 TreeItem<String> sceneItem = new TreeItem<>(sceneName);
                 actItem.getChildren().add(sceneItem);
             }
         }
+
         treeView.setRoot(root);
-        treeView.getSelectionModel().selectFirst();
         treeView.setEditable(false);
+        treeView.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
+            System.out.println("selected changed!");
+            TreeItem<String> newItem = (TreeItem<String>) newVal;
+            String leafTxt = newItem.getValue();
+            String parentTxt = newItem.getParent().getValue();
+
+            // Iterate through the tree structure until the new scene is found
+            int count = 0;
+            for (TreeItem<String> act : root.getChildren()) {
+                for (TreeItem<String> scene : act.getChildren()) {
+                    if (scene.getValue().equals(leafTxt) && scene.getParent().getValue().equals(parentTxt)) {
+                        changeScene(count);
+                        break;
+                    }
+                    count++;
+                }
+            }
+        });
 
         sceneList = generateSceneList(acts, sceneList);
 
-        // Start the textview at the first scene
+        // Start the treeview and textview at the first scene
+        root.getChildren().get(0).setExpanded(true);
+        treeView.getSelectionModel().select(root.getChildren().get(0).getChildren().get(0));
         sceneIndex = 0;
         changeScene(sceneIndex);
+
     }
 
     private List<Scene> generateSceneList(List<Act> acts, List<Scene> sceneList) {
         List<Scene> scenes = new ArrayList<>();
-        for(Act a : acts) {
+        for (Act a : acts) {
             scenes.addAll(a.getScenes());
         }
         return scenes;
     }
 
-    private void nextScene() {
-        if(sceneIndex < sceneList.size() - 1) {
-            sceneIndex++;
-            changeScene(sceneIndex);
-        }
-    }
-
-    private void lastScene() {
-        if(sceneIndex > 1) {
-            sceneIndex--;
-            changeScene(sceneIndex);
-        }
-    }
-
     private void changeScene(int newIndex) {
 
+        sceneIndex = newIndex;
         Scene nextScene = sceneList.get(newIndex);
 
         // Set the txt to the scene text
         String lastSpeacker = null;
-        String txt = "Act " + nextScene.getActNumber() + ", " + nextScene.getTitle() + "\n\n";
-        System.out.flush();
+        String txt = "ACT " + nextScene.getActNumber() + ", " + nextScene.getTitle() + "\n\n";
         for (Line l : nextScene.getLines()) {
             if (l.isSpeech()) {
                 // TODO: use String.format to keep the line number right-justfied
@@ -108,7 +112,7 @@ public class ReaderController {
 
                 // If the speaker is new, print their name
                 String speaker = speech.getSpeaker();
-                if(!speaker.equals(lastSpeacker)) {
+                if (!speaker.equals(lastSpeacker)) {
                     txt += speaker;
                     lastSpeacker = speaker;
                 }
@@ -124,24 +128,10 @@ public class ReaderController {
         textArea.setText(txt);
     }
 
-    // TODO: allow the user to change the scene using the root view
-    public void onKeyPressedTreeView(KeyEvent evt) {
-        if(evt.getCode() == KeyCode.ENTER) {
-            // Change the selected scene
-
-        }
-    }
-
     public void onKeyReleased(KeyEvent evt) {
 
         KeyCode kc = evt.getCode();
 
-        if(kc == KeyCode.UP) {
-            lastScene();
-        }
-        if(kc == KeyCode.DOWN) {
-            nextScene();
-        }
         if (evt.isShortcutDown() && kc == KeyCode.C) {
 
             // Get the current clipboard content
@@ -151,8 +141,19 @@ public class ReaderController {
 
             // Replace the current clipboard content with the edited content
             Scene selectedScene = sceneList.get(sceneIndex);
+            int[] lineNumbers = getLineBounds(selected, sceneList.get(sceneIndex));
+            String lineNumTxt = "";
+            if(lineNumbers == null) {
+                System.out.println("Not found: " + selected);
+            } else {
+                if(lineNumbers[0] == lineNumbers[1]) {
+                    lineNumTxt = lineNumbers[0] + "";
+                } else {
+                    lineNumTxt = lineNumbers[0] + "-" + lineNumbers[1];
+                }
+            }
             String edited = "\"" + selected + "\" (" + selectedScene.getActNumber() + "."
-                    + selectedScene.getSceneNumber() + ".TODO - TODO)"; // TODO
+                    + selectedScene.getSceneNumber() + "." + lineNumTxt + ")"; // TODO
             ClipboardContent content = new ClipboardContent();
             content.putString(edited);
             content.putHtml("bold: <b>" + edited + "</b>");
@@ -167,27 +168,55 @@ public class ReaderController {
         Main.scene.setRoot(libraryPane);
     }
 
-//    private List<Act> getTestData() {
-//
-//        List<Act> acts = new ArrayList<>();
-//
-//        List<Line> lines = new ArrayList<>();
-//        lines.add(new StageDirection("Enter Maximum Lius", 1));
-//        lines.add(new Speech("Max", "Wassup Brittany", 2));
-//        lines[2] = new Speech("Andrew", "dsajflkjaskl;jdkfl;jak;sjl;fjsal;j;l", 3);
-//
-//        Scene[] scenes = new Scene[3];
-//        scenes[0] = new Scene("First Scene", lines);
-//        scenes[0].setActNumber("1");
-//        scenes[1] = new Scene("Second Scene", lines);
-//        scenes[1].setActNumber("1");
-//        scenes[2] = new Scene("Third Scene", lines);
-//        scenes[2].setActNumber("2");
-//
-//        acts.add(new Act("First Act", scenes));
-//        acts.add(new Act("Second Act", scenes));
-//        acts.add(new Act("Third Act", scenes));
-//
-//        return acts;
-//    }
+    // Get the start and end line of the
+    private int[] getLineBounds(String searchText, Scene scene) {
+
+        int firstLine = -1;
+
+        String[] searchWords = searchText.split(" ");
+
+        // Don't bother retrieving the lines for very short quotations
+        if(searchWords.length <= 2) {
+            return null;
+        }
+
+        String firstSearchWord = searchWords[0];
+        for(int i = 0; i < scene.getLines().size(); i++) {
+            String line = scene.getLines().get(i).getText();
+            String[] lineWords = line.split(" ");
+            for(int j = 0; j < lineWords.length; j++) {
+                String lineWord = lineWords[j];
+
+                // Check for the beginning of the first line
+                if(lineWord.equals(firstSearchWord)) {
+                    firstLine = i;
+                    int lastLine = getLastLine(searchWords, 1, lineWords, j, scene.getLines(), i);
+                    int[] lines = {firstLine, lastLine};
+                    return lines;
+                }
+            }
+        }
+
+        // Nothing found
+        return null;
+    }
+
+    private int getLastLine(String[] searchWords, int searchWordIndex, String[] lineWords,
+                            int lineWordIndex, List<Line> lines, int lineIndex) {
+
+        for(int i = searchWordIndex; i < searchWords.length; i++, lineWordIndex++) {
+
+            String searchWord = searchWords[i];
+
+            if(lineWordIndex < lineWords.length) {
+                if(!searchWord.equals(lineWords[lineWordIndex])) {
+                    return -1;
+                }
+            } else {
+                // Move on to the next line
+                return getLastLine(searchWords, i, lineWords, lineWordIndex, lines, lineIndex + 1);
+            }
+        }
+        return lineIndex;
+    }
 }
