@@ -97,35 +97,78 @@ public class ReaderController {
         return scenes;
     }
 
+    private void nextScene() {
+        if(sceneIndex < sceneList.size() - 1) {
+            sceneIndex++;
+            changeScene(sceneIndex);
+        }
+    }
+
+    private void lastScene() {
+        if(sceneIndex > 1) {
+            sceneIndex--;
+            changeScene(sceneIndex);
+        }
+    }
+
+    public static String getSpaces(int n) {
+        StringBuilder s = new StringBuilder();
+        for (;n --> 0;) {
+            s.append(" ");
+        }
+        return s.toString();
+    }
+
     private void changeScene(int newIndex) {
 
         sceneIndex = newIndex;
         Scene nextScene = sceneList.get(newIndex);
 
         // Set the txt to the scene text
-        String lastSpeacker = null;
-        String txt = "ACT " + nextScene.getActNumber() + ", " + nextScene.getTitle() + "\n\n";
+        String lastSpeaker = "";
+        StringBuilder txt = new StringBuilder().append("Act ").append(nextScene.getActNumber()).append(", ").append(nextScene.getTitle()).append("\n\n");
+        System.out.flush();
         for (Line l : nextScene.getLines()) {
-            if (l.isSpeech()) {
-                // TODO: use String.format to keep the line number right-justfied
-                Speech speech = (Speech) l;
+//
+//            if (l.isSpeech()) {
+//                // TODO: use String.format to keep the line number right-justfied
+//                Speech speech = (Speech) l;
+//
+//                // If the speaker is new, print their name
+//                String speaker = speech.getSpeaker();
+//                if(!speaker.equals(lastSpeaker)) {
+//                    txt += speaker;
+//                    lastSpeaker = speaker;
+//                }
+//                txt += "\n" + speech.getText();
+//                txt += "  " + speech.getLineNumber();
+//                txt += "\n";
+//            } else {
+//                StageDirection stageDirection = (StageDirection) l;
+//                txt += stageDirection.getText() + "   " + stageDirection.getLineNumber() + "\n";
+//            }
+//            txt += "\n";
 
-                // If the speaker is new, print their name
-                String speaker = speech.getSpeaker();
-                if (!speaker.equals(lastSpeacker)) {
-                    txt += speaker;
-                    lastSpeacker = speaker;
+            if (l.isSpeech()) {
+                Speech speech = (Speech) l;
+                if (lastSpeaker.equals(speech.getSpeaker())) {
+                    txt.append(getSpaces(15 + 1))
+                            .append(speech.getText())
+                            .append("\n");
+                } else {
+                    txt.append("\n").append(speech.getSpeaker())
+                            .append(":")
+                            .append(getSpaces(15 - speech.getSpeaker().length()))
+                            .append(speech.getText())
+                            .append("\n");
+                    lastSpeaker = speech.getSpeaker();
                 }
-                txt += "\n" + speech.getText();
-                txt += "  " + speech.getLineNumber();
-                txt += "\n";
+
             } else {
-                StageDirection stageDirection = (StageDirection) l;
-                txt += stageDirection.getText() + "   " + stageDirection.getLineNumber() + "\n";
+                txt.append("\n").append(getSpaces(4)).append(l.getText()).append("\n");
             }
-            txt += "\n";
         }
-        textArea.setText(txt);
+        textArea.setText(txt.toString());
     }
 
     public void onKeyReleased(KeyEvent evt) {
