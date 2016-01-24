@@ -6,11 +6,16 @@
 <?import application.SceneArea?>
 <?import javafx.scene.control.TreeView?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
 <BorderPane fx:controller="application.RootController"
           xmlns:fx="http://javafx.com/fxml">
 
     <top>
-        <Text fx:id="playName"></Text>
+        <HBox spacing="10">
+            <Button text="Back" onAction="#goBack"></Button>
+            <Text fx:id="playNameText"></Text>
+        </HBox>
     </top>
     <center>
         <TextArea fx:id="textArea" editable="false" onKeyReleased="#onKeyReleased"></TextArea>

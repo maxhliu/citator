@@ -1,16 +1,15 @@
 package application;
 
-import javafx.event.Event;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.input.*;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
-import org.xml.sax.SAXException;
 
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,13 +17,13 @@ import java.util.List;
 /**
  * Created by matthewriley on 16-01-23.
  */
-public class RootController {
+public class ReaderController {
 
     private List<Scene> sceneList;
     private int sceneIndex;
 
     @FXML
-    private Text playName;
+    private Text playNameText;
 
     @FXML
     private TextArea textArea;
@@ -34,17 +33,22 @@ public class RootController {
 
     @FXML
     protected void initialize() {
+    }
+
+    public void initViewer(String playName, String fileName) {
 
         // Parse the play into a list of acts
         List<Act> acts = null;
         try {
-            acts = Parse.parseXML();
+            acts = Parse.parseXML(fileName);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+        playNameText.setText(playName);
+
         // Init the treeView
-        TreeItem<String> root = new TreeItem<>("Hamlet"); // TODO: add play name
+        TreeItem<String> root = new TreeItem<>();
         root.setExpanded(true);
         for(Act a : acts) {
             String actName = String.format("Act %5s", a.getActNumber());
@@ -66,10 +70,6 @@ public class RootController {
         // Start the textview at the first scene
         sceneIndex = 0;
         changeScene(sceneIndex);
-    }
-
-    public void setPlayName(String name) {
-        playName.setText(name);
     }
 
     private List<Scene> generateSceneList(List<Act> acts, List<Scene> sceneList) {
@@ -117,6 +117,7 @@ public class RootController {
         textArea.setText(txt);
     }
 
+    // TODO: allow the user to change the scene using the root view
     public void onKeyPressedTreeView(KeyEvent evt) {
         if(evt.getCode() == KeyCode.ENTER) {
             // Change the selected scene
@@ -150,6 +151,13 @@ public class RootController {
             content.putHtml("bold: <b>" + edited + "</b>");
             cb.setContent(content);
         }
+    }
+
+    // Return to the menu
+    public void goBack(ActionEvent e) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("library_view.fxml"));
+        Pane libraryPane = loader.load();
+        Main.scene.setRoot(libraryPane);
     }
 
 //    private List<Act> getTestData() {
