@@ -46,7 +46,7 @@ public class Main extends Application {
             e.printStackTrace();
         }
         primaryStage.setTitle("Hello World");
-        scene = new javafx.scene.Scene(root, 600, 600);
+        scene = new javafx.scene.Scene(root, 800, 600);
         scene.getStylesheets().add(
                 getClass().getResource("application.css").toExternalForm());
         primaryStage.setScene(scene);

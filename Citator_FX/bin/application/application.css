@@ -7,20 +7,21 @@
     -fx-background-color: lightsteelblue; */
 }
 
-.border-pane {
-    -fx-padding: 10;
+#stackpane {
+
 }
 
-.stack-pane {
-    -fx-padding: 10;
-}
+#title {
+    -fx-font-size: 40;
+ }
 
-.vbox {
-    -fx-padding: 10;
-    -fx-spacing: 10;
-}
-
-.hbox {
-    -fx-padding: 10;
-    -fx-spacing: 10;
+.text-area .scroll-bar:vertical .increment-arrow,
+.text-area .scroll-bar:vertical .decrement-arrow,
+.text-area .scroll-bar:vertical .increment-button,
+.text-area .scroll-bar:vertical .decrement-button,
+.tree-view .scroll-bar:vertical .increment-arrow,
+.tree-view .scroll-bar:vertical .decrement-arrow,
+.tree-view .scroll-bar:vertical .increment-button,
+.tree-view .scroll-bar:vertical .decrement-button {
+    -fx-padding:0;
 }

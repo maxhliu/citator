@@ -9,26 +9,38 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
 <BorderPane fx:controller="application.ReaderController"
-          xmlns:fx="http://javafx.com/fxml">
-
-    <top>
-    </top>
-    <center>
-        <TextArea fx:id="textArea" editable="false" onKeyReleased="#onKeyReleased"></TextArea>
-    </center>
+          xmlns:fx="http://javafx.com/fxml" >
 
     <left>
         <BorderPane>
             <top>
-                <Text fx:id="playNameText"></Text>
+                <StackPane id="stackpane">
+                    <padding><Insets top="15" right="15" bottom="0" left="15"/></padding>
+                    <Label fx:id="playNameText" alignment="CENTER"></Label>
+                </StackPane>
             </top>
             <center>
-                <TreeView fx:id="treeView" showRoot="false" prefWidth="150"></TreeView>
+                <StackPane>
+                    <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+                    <TreeView id="treeview" fx:id="treeView" showRoot="false" prefWidth="150" prefHeight="700"></TreeView>
+                </StackPane>
             </center>
             <bottom>
-                <Button text="Back" onAction="#goBack"></Button>
+                <StackPane id = "stackpane">
+                    <padding><Insets top="0" right="15" bottom="15" left="15"/></padding>
+                    <Button text="Back" onAction="#goBack"></Button>
+                </StackPane>
             </bottom>
         </BorderPane>
     </left>
+
+    <center>
+        <StackPane>
+            <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+            <TextArea fx:id="textArea" editable="false" wrapText="true" onKeyReleased="#onKeyReleased"></TextArea>
+        </StackPane>
+    </center>
 </BorderPane>

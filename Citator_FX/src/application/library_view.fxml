@@ -10,17 +10,19 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
 <BorderPane fx:controller="application.LibraryController"
           xmlns:fx="http://javafx.com/fxml">
     <top>
-        <VBox>
-            <Label text="(Stage Direction) Shakes Pear Maniacally" alignment="center"></Label>
-        </VBox>
+        <StackPane>
+            <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+            <Label id="title" fx:id="title" text="Pick a Play" alignment="center"></Label>
+        </StackPane>
     </top>
     <center>
-        <VBox alignment="center">
+        <StackPane>
+            <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
             <ListView fx:id="bookList" editable="false"></ListView>
-            <Button text="Read" onAction="#selectBook"></Button>
-        </VBox>
+        </StackPane>
     </center>
 </BorderPane>

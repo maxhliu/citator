@@ -63,9 +63,21 @@ public class LibraryController {
 
         Collections.sort(playNames);
         bookList.setItems(FXCollections.observableArrayList(playNames));
+
+        // When the user double-clicks a book, select it
+        bookList.setOnMousePressed((evt) -> {
+            if(evt.getClickCount() >= 2) {
+                try {
+                    selectBook();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
     }
 
-    public void selectBook(ActionEvent evt) throws IOException {
+    public void selectBook() throws IOException {
         if(!bookList.getSelectionModel().isEmpty()) {
             String playName = bookList.getSelectionModel().getSelectedItem();
             String fileName = playNameToFilename.get(playName);
