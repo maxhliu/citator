@@ -1,15 +1,16 @@
 package application;
 
-import com.sun.tools.javac.util.StringUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeView;
 import javafx.scene.input.*;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -132,25 +133,6 @@ public class ReaderController {
         StringBuilder txt = new StringBuilder().append("Act ").append(nextScene.getActNumber()).append(", ").append(nextScene.getTitle()).append("\n\n");
         System.out.flush();
         for (Line l : nextScene.getLines()) {
-//
-//            if (l.isSpeech()) {
-//                // TODO: use String.format to keep the line number right-justfied
-//                Speech speech = (Speech) l;
-//
-//                // If the speaker is new, print their name
-//                String speaker = speech.getSpeaker();
-//                if(!speaker.equals(lastSpeaker)) {
-//                    txt += speaker;
-//                    lastSpeaker = speaker;
-//                }
-//                txt += "\n" + speech.getText();
-//                txt += "  " + speech.getLineNumber();
-//                txt += "\n";
-//            } else {
-//                StageDirection stageDirection = (StageDirection) l;
-//                txt += stageDirection.getText() + "   " + stageDirection.getLineNumber() + "\n";
-//            }
-//            txt += "\n";
 
             if (l.isSpeech()) {
                 Speech speech = (Speech) l;
@@ -184,6 +166,7 @@ public class ReaderController {
             Clipboard cb = Clipboard.getSystemClipboard();
             String selected = cb.getContent(DataFormat.PLAIN_TEXT)
                     .toString();
+            selected = selected.trim();
 
             // Replace the current clipboard content with the edited content
             Scene selectedScene = sceneList.get(sceneIndex);
@@ -194,6 +177,11 @@ public class ReaderController {
             } else {
                 lineNumTxt = lineNumbers[0] + "-" + lineNumbers[1];
             }
+
+            // Edit the selected string: add slashes for line #s, and remove extravagant white spaces
+            selected = selected.replace("\n", " \\ "); // replace new-lines with backslashes
+            selected = selected.replaceAll("\\s+"," "); // remove consecutive spaces
+
             String edited = "\"" + selected + "\" (" + selectedScene.getActNumber() + "."
                     + selectedScene.getSceneNumber() + "." + lineNumTxt + ")"; // TODO
             ClipboardContent content = new ClipboardContent();
@@ -210,15 +198,18 @@ public class ReaderController {
         Main.scene.setRoot(libraryPane);
     }
 
+    // Based on the occurence of new-line characters
     private int[] getLineBoundsHack(String searchTxt) {
 
         String fullTxt = textArea.getText();
 
-        // Count the # of new-line characters
+        // Remove consecutive newlines from the fulltext
+        String slimFull = fullTxt.replaceAll("\n+", "\n");
+
         int index = fullTxt.indexOf(searchTxt);
 
         // Get the # of new-line characters until the index
-        String toSearchTxt = fullTxt.substring(0, index);
+        String toSearchTxt = slimFull.substring(0, index);
         int startLine = numOccurrences(toSearchTxt);
         int endLine = startLine + numOccurrences(searchTxt);
         int[] bounds = {startLine, endLine};
@@ -229,91 +220,4 @@ public class ReaderController {
         // -1 is to prevent the trailing empties from being dropped
         return s.split("\n", -1).length - 1;
     }
-
-//    // Get the start and end line of the
-//    private int[] getLineBounds(String searchText, Scene scene) {
-//
-//        int firstLine = -1;
-//
-//        String[] searchWords = searchText.split(" ");
-//
-//        // Don't bother retrieving the lines for very short quotations
-//        if(searchWords.length < 2) {
-//            return null;
-//        }
-//
-//        String s = "";
-//        //s.regionMatches();
-//
-//        String firstSearchWord = searchWords[0];
-//        for(int i = 0; i < scene.getLines().size(); i++) {
-//            String line = scene.getLines().get(i).getText();
-//            String[] lineWords = line.split(" ");
-//            for(int j = 0; j < lineWords.length; j++) {
-//                String lineWord = lineWords[j];
-//
-//                // Check for the beginning of the first line
-//                if(lineWord.equals(firstSearchWord)) {
-//                    firstLine = i;
-//                    int lastLine = getLastLine(searchWords, 1, lineWords, j, scene.getLines(), i);
-//                    int[] lines = {firstLine, lastLine};
-//                    return lines;
-//                }
-//            }
-//        }
-//
-//        // Nothing found
-//        return null;
-//    }
-
-//    private int getLastLine(String[] searchWords, int searchWordIndex, String[] lineWords,
-//                            int lineWordIndex, List<Line> lines, int lineIndex) {
-//
-//        String searchArea = "";
-//
-//        // Get the current speaker
-//        String originalSpeaker = null;
-//        Line firstLine = lines.get(lineIndex);
-//        if(firstLine.isSpeech()) {
-//            Speech speech = (Speech) firstLine;
-//            originalSpeaker = speech.getSpeaker();
-//        }
-//
-//        // Look for the phrase until the end of the speech
-//        String currentSpeaker = null;
-//        do {
-//            Line line = lines.get(lineIndex);
-//            if(line.isSpeech()) {
-//                Speech speech = (Speech) line;
-//                currentSpeaker = speech.getSpeaker();
-//                if(currentSpeaker.equals(originalSpeaker)) {
-//                    searchArea +=
-//                    break;
-//                }
-//            } else {
-//                break;
-//            }
-//            lineIndex++;
-//
-//        } while(currentSpeaker.equals(originalSpeaker));
-//
-//        return lineIndex;
-//
-//        /*
-//        for(int i = searchWordIndex; i < searchWords.length; i++, lineWordIndex++) {
-//
-//            String searchWord = searchWords[i];
-//
-//            if(lineWordIndex < lineWords.length) {
-//                if(!searchWord.equals(lineWords[lineWordIndex])) {
-//                    return -1;
-//                }
-//            } else {
-//                // Move on to the next line
-//                return getLastLine(searchWords, i, lineWords, lineWordIndex, lines, lineIndex + 1);
-//            }
-//        }
-//        */
-//        return lineIndex;
-//    }
 }

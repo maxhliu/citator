@@ -15,13 +15,14 @@
     -fx-font-size: 40;
  }
 
-.text-area .scroll-bar:vertical .increment-arrow,
+/*.text-area .scroll-bar:vertical .increment-arrow,
 .text-area .scroll-bar:vertical .decrement-arrow,
 .text-area .scroll-bar:vertical .increment-button,
-.text-area .scroll-bar:vertical .decrement-button,
+.text-area .scroll-bar:vertical .decrement-button, */
 .tree-view .scroll-bar:vertical .increment-arrow,
 .tree-view .scroll-bar:vertical .decrement-arrow,
 .tree-view .scroll-bar:vertical .increment-button,
 .tree-view .scroll-bar:vertical .decrement-button {
-    -fx-padding:0;
+    -fx-padding: 0;
+    -fx-opacity: 0;
 }

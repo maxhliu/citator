@@ -1,37 +1,11 @@
 package application;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
+import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-
-import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.input.Clipboard;
-import javafx.scene.input.ClipboardContent;
-import javafx.scene.input.DataFormat;
-import javafx.scene.input.KeyCode;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Main extends Application {
 
@@ -46,35 +20,13 @@ public class Main extends Application {
             e.printStackTrace();
         }
         primaryStage.setTitle("Hello World");
-        scene = new javafx.scene.Scene(root, 800, 600);
+        scene = new javafx.scene.Scene(root, 1000, 650);
         scene.getStylesheets().add(
                 getClass().getResource("application.css").toExternalForm());
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Citator");
+        primaryStage.setTitle("Shakes Pear");
         primaryStage.show();
     }
-
-//    private String loadText()
-//            throws SAXException, IOException, ParserConfigurationException {
-//        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-//        DocumentBuilder builder = factory.newDocumentBuilder();
-//        File xmlFile = new File("hamlet.xml");
-//        Document doc = builder.parse(xmlFile);
-//        Element root = doc.getDocumentElement();
-//        return parseText(root);
-//    }
-//
-//    private String parseText(Node root) {
-//
-//        System.out.println(root.getNodeName() + " " + root.getTextContent());
-//        NodeList nList = root.getChildNodes();
-//        for(int i = 0; i < nList.getLength(); i++) {
-//            Node n = nList.item(i);
-//            System.out.println(n.getNodeName());
-//        }
-//
-//        return "";
-//    }
 
     public static void main(String[] args) {
         launch(args);
