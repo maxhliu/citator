@@ -1,0 +1,22 @@
+<?import javafx.scene.control.ScrollPane?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TextArea?>
+<?import application.SceneArea?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<BorderPane fx:controller="application.LibraryController"
+          xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <Text text="(Stage Direction) Shakes Pear Maniacally"></Text>
+    </top>
+    <center>
+        <VBox spacing="10">
+            <ListView fx:id="bookList" editable="false"></ListView>
+            <Button text="Read" onAction="#selectBook"></Button>
+        </VBox>
+    </center>
+</BorderPane>
