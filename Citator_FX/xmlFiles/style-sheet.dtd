@@ -4,23 +4,23 @@
 -->
 
 <!element style-sheet o o (style-specification,
-        (external-specification|style-specification)*)>
+			   (external-specification|style-specification)*)>
 <!element style-specification o o (style-specification-body)>
 <!attlist style-specification
-        id id #implied
-        use idrefs #implied
-        >
+  id id #implied
+  use idrefs #implied
+>
 <!element style-specification-body o o (#pcdata)>
 <!attlist style-specification-body
-        content entity #conref
-        >
+  content entity #conref
+>
 <!element external-specification - o empty>
 <!attlist external-specification
-        id id #required
-        document entity #required
-        specid name #implied
-        >
-        <?IS10744 ArcBase DSSSL>
+  id id #required
+  document entity #required
+  specid name #implied
+>
+<?IS10744 ArcBase DSSSL>
 <!NOTATION DSSSL   PUBLIC "ISO/IEC 10179:1996//NOTATION
                    DSSSL Architecture Definition Document//EN"
                 -- A document architecture conforming to the

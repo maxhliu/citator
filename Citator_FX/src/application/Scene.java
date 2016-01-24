@@ -16,7 +16,7 @@ public class Scene {
         this.title = title;
         sceneNumber = title.split(" ")[1].replaceAll("\\.", "");
         this.lines = lines;
-        this.actNumber = actNumber;
+        this.actNumber = actNumber.split(" ")[1].replaceAll("\\.", "");
     }
 
     public String getSceneNumber() {

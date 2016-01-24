@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Parse {
+    static int lineNumber = 0;
     //returns true if one of b equals a
     public static boolean stringEquals(String a, String... b) {
         for (String s : b) {
@@ -55,7 +56,7 @@ public class Parse {
 
         for (Node act : nodeActs) {
             //start the line number, which resets after each act
-            int lineNumber = 0;
+            lineNumber = 0;
             //navigate through the scene nodes, turning them into Scene objects
             List<Node> nodeScenes = findChildNodesByName(act, "SCENE");
             List<Scene> scenes = new ArrayList<>();
@@ -63,17 +64,35 @@ public class Parse {
             for (Node scene : nodeScenes) {
                 //navigate through the speech and stagedir nodes, turning them into Line objects
                 List<Line> lines = new ArrayList<>();
-                List<Node> nodeLines = findChildNodesByName(scene, "SPEECH", "STAGEDIR");
+                List<Node> nodeSegments = findChildNodesByName(scene, "SPEECH", "STAGEDIR");
 
-                for (Node line : nodeLines) {
+                for (Node segment : nodeSegments) {
                     //see if it's a speech or stagedir node
-                    if (line.getNodeName().equals("SPEECH")) {
-                        //speeches can start with a stagedir which doesn't count as a line
-                        //if it's a speech node it can have multiple lines inside
-                        lines.add(new Speech(line.getFirstChild().getTextContent(),
-                                line.getLastChild().getTextContent(), lineNumber++));
+                    if (segment.getNodeName().equals("SPEECH")) {
+                        String speaker = segment.getFirstChild().getTextContent();
+                        NodeList nodeLines = segment.getChildNodes();
+                        //go through all the nodes after the speaker node
+                        for (int i = 1; i < nodeLines.getLength(); i++) {
+                            Node line = nodeLines.item(i);
+                            //stagedirs can be hiding inside speeches
+                            if (line.getNodeName().equals("STAGEDIR")) {
+                                lines.add(new StageDirection(speaker, lineNumber++));
+                            } else {
+                                //they can even be hiding inside lines!
+                                String content = line.getTextContent();
+                                if (!line.getFirstChild().getNodeName().equals("#text")) {
+                                    String direction = line.getFirstChild().getTextContent();
+                                    content = content .replaceAll(direction, "[" + direction + "]");
+                                }
+                                lines.add(new Speech(speaker, content, lineNumber++));
+                            }
+                        }
+
+                        lines.add(new Speech(speaker,
+                                segment.getLastChild().getTextContent(), lineNumber++));
                     } else {
-                        lines.add(new StageDirection(line.getFirstChild().getTextContent(), lineNumber++));
+                        String text = segment.getFirstChild().getTextContent();
+                        lines.add(new StageDirection(text, lineNumber++));
                     }
 
                 }
