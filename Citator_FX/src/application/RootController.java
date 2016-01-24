@@ -7,6 +7,7 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.input.*;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -21,6 +22,9 @@ public class RootController {
 
     private List<Scene> sceneList;
     private int sceneIndex;
+
+    @FXML
+    private Text playName;
 
     @FXML
     private TextArea textArea;
@@ -41,15 +45,19 @@ public class RootController {
 
         // Init the treeView
         TreeItem<String> root = new TreeItem<>("Hamlet"); // TODO: add play name
+        root.setExpanded(true);
         for(Act a : acts) {
-            TreeItem<String> actItem = new TreeItem<>("Act " + a.getActNumber());
+            String actName = String.format("Act %5s", a.getActNumber());
+            TreeItem<String> actItem = new TreeItem<>(actName);
             root.getChildren().add(actItem);
             for(Scene s : a.getScenes()) {
-                TreeItem<String> sceneItem = new TreeItem<>("Scene " + s.getSceneNumber());
+                String sceneName = String.format("Scene %5s", s.getSceneNumber());
+                TreeItem<String> sceneItem = new TreeItem<>(sceneName);
                 actItem.getChildren().add(sceneItem);
             }
         }
         treeView.setRoot(root);
+        treeView.getSelectionModel().selectFirst();
         treeView.setEditable(false);
 
         //
@@ -58,6 +66,10 @@ public class RootController {
         // Start the textview at the first scene
         sceneIndex = 0;
         changeScene(sceneIndex);
+    }
+
+    public void setPlayName(String name) {
+        playName.setText(name);
     }
 
     private List<Scene> generateSceneList(List<Act> acts, List<Scene> sceneList) {
@@ -103,6 +115,13 @@ public class RootController {
             txt += "\n";
         }
         textArea.setText(txt);
+    }
+
+    public void onKeyPressedTreeView(KeyEvent evt) {
+        if(evt.getCode() == KeyCode.ENTER) {
+            // Change the selected scene
+
+        }
     }
 
     public void onKeyReleased(KeyEvent evt) {

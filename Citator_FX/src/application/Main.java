@@ -34,16 +34,19 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+
+    static javafx.scene.Scene scene;
+
     @Override
     public void start(Stage primaryStage) {
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("root.fxml"));
+            root = FXMLLoader.load(getClass().getResource("library_view.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
         primaryStage.setTitle("Hello World");
-        javafx.scene.Scene scene = new javafx.scene.Scene(root, 600, 600);
+        scene = new javafx.scene.Scene(root, 600, 600);
         scene.getStylesheets().add(
                 getClass().getResource("application.css").toExternalForm());
         primaryStage.setScene(scene);
