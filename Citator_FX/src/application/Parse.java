@@ -50,10 +50,10 @@ public class Parse {
         Document doc = builder.parse(new File("xmlFiles/" + playName + ".xml"));
         Node root = doc.getDocumentElement();
 
-        //navigate through the act nodes, turning them into Act objects
         List<Act> acts = new ArrayList<>();
         List<Node> nodeActs = findChildNodesByName(root, "ACT");
 
+        //navigate through the act nodes, turning them into Act objects
         for (Node act : nodeActs) {
             //start the line number, which resets after each act
             lineNumber = 0;
@@ -62,21 +62,22 @@ public class Parse {
             List<Scene> scenes = new ArrayList<>();
 
             for (Node scene : nodeScenes) {
-                //navigate through the speech and stagedir nodes, turning them into Line objects
                 List<Line> lines = new ArrayList<>();
                 List<Node> nodeSegments = findChildNodesByName(scene, "SPEECH", "STAGEDIR");
 
+                //navigate through the speech and stagedir nodes, turning them into Line objects
                 for (Node segment : nodeSegments) {
                     //see if it's a speech or stagedir node
                     if (segment.getNodeName().equals("SPEECH")) {
                         String speaker = segment.getFirstChild().getTextContent();
                         NodeList nodeLines = segment.getChildNodes();
+
                         //go through all the nodes after the speaker node
                         for (int i = 1; i < nodeLines.getLength(); i++) {
                             Node line = nodeLines.item(i);
                             //stagedirs can be hiding inside speeches
                             if (line.getNodeName().equals("STAGEDIR")) {
-                                lines.add(new StageDirection(speaker, lineNumber++));
+                                lines.add(new StageDirection(line.getTextContent(), lineNumber++));
                             } else {
                                 //they can even be hiding inside lines!
                                 String content = line.getTextContent();
@@ -87,12 +88,15 @@ public class Parse {
                                 lines.add(new Speech(speaker, content, lineNumber++));
                             }
                         }
-
-                        lines.add(new Speech(speaker,
-                                segment.getLastChild().getTextContent(), lineNumber++));
                     } else {
-                        String text = segment.getFirstChild().getTextContent();
-                        lines.add(new StageDirection(text, lineNumber++));
+                        String text = segment.getTextContent();
+                        String[] textLines = text.split("\\r?\\n");
+                        //there is the possiblity of multiline stage directions
+                        for (String s : textLines) {
+                            lines.add(new StageDirection(s, lineNumber++));
+                        }
+//                        lines.add(new StageDirection(text, lineNumber));
+//                        lineNumber += textLines.length;
                     }
 
                 }
@@ -105,8 +109,38 @@ public class Parse {
         return acts;
     }
 
+    public static void printSpaces(int n) {
+        for (;n --> 0;) {
+            System.out.print(" ");
+        }
+    }
+
     public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
-        parseXML();
+        List <Act> acts = parseXML();
+        String lastSpeaker = "";
+        for (Act act : acts) {
+            for (Scene scene : act.getScenes()) {
+                for (Line line : scene.getLines()) {
+                    if (line.isSpeech()) {
+                        Speech speech = (Speech) line;
+                        if (lastSpeaker.equals(speech.getSpeaker())) {
+                            printSpaces(15 + 1);
+                            System.out.printf("%s%n", speech.getText());
+                        } else {
+                            System.out.print("\n" + speech.getSpeaker() + ":");
+                            printSpaces(15 - speech.getSpeaker().length());
+                            System.out.printf("%s%n", speech.getText());
+                            lastSpeaker = speech.getSpeaker();
+                        }
+
+                    } else {
+                        System.out.println("");
+                        System.out.printf("\t%s%n", line.getText());
+                        System.out.println("");
+                    }
+                }
+            }
+        }
     }
 
 }

@@ -2,49 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a69aff8-8efa-4264-b045-c7c6bd5db1f5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/application/Scene.class" afterPath="$PROJECT_DIR$/bin/application/Scene.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Line.java" afterPath="$PROJECT_DIR$/src/application/Line.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Parse.java" afterPath="$PROJECT_DIR$/src/application/Parse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Scene.java" afterPath="$PROJECT_DIR$/src/application/Scene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/a_and_c.xml" afterPath="$PROJECT_DIR$/xmlFiles/a_and_c.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/all_well.xml" afterPath="$PROJECT_DIR$/xmlFiles/all_well.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/as_you.xml" afterPath="$PROJECT_DIR$/xmlFiles/as_you.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/com_err.xml" afterPath="$PROJECT_DIR$/xmlFiles/com_err.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/coriolan.xml" afterPath="$PROJECT_DIR$/xmlFiles/coriolan.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/cymbelin.xml" afterPath="$PROJECT_DIR$/xmlFiles/cymbelin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/dream.xml" afterPath="$PROJECT_DIR$/xmlFiles/dream.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/dsssl.dtd" afterPath="$PROJECT_DIR$/xmlFiles/dsssl.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/fot.dtd" afterPath="$PROJECT_DIR$/xmlFiles/fot.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hamlet.xml" afterPath="$PROJECT_DIR$/xmlFiles/hamlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_iv_1.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_iv_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_iv_2.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_iv_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_v.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_v.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_vi_1.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_vi_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_vi_2.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_vi_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_vi_3.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_vi_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_viii.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_viii.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/j_caesar.xml" afterPath="$PROJECT_DIR$/xmlFiles/j_caesar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/john.xml" afterPath="$PROJECT_DIR$/xmlFiles/john.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/lear.xml" afterPath="$PROJECT_DIR$/xmlFiles/lear.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/lll.xml" afterPath="$PROJECT_DIR$/xmlFiles/lll.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/m_for_m.xml" afterPath="$PROJECT_DIR$/xmlFiles/m_for_m.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/m_wives.xml" afterPath="$PROJECT_DIR$/xmlFiles/m_wives.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/macbeth.xml" afterPath="$PROJECT_DIR$/xmlFiles/macbeth.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/merchant.xml" afterPath="$PROJECT_DIR$/xmlFiles/merchant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/much_ado.xml" afterPath="$PROJECT_DIR$/xmlFiles/much_ado.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/othello.xml" afterPath="$PROJECT_DIR$/xmlFiles/othello.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/pericles.xml" afterPath="$PROJECT_DIR$/xmlFiles/pericles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/play.dtd" afterPath="$PROJECT_DIR$/xmlFiles/play.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/r_and_j.xml" afterPath="$PROJECT_DIR$/xmlFiles/r_and_j.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/rich_ii.xml" afterPath="$PROJECT_DIR$/xmlFiles/rich_ii.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/rich_iii.xml" afterPath="$PROJECT_DIR$/xmlFiles/rich_iii.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/style-sheet.dtd" afterPath="$PROJECT_DIR$/xmlFiles/style-sheet.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/t_night.xml" afterPath="$PROJECT_DIR$/xmlFiles/t_night.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/taming.xml" afterPath="$PROJECT_DIR$/xmlFiles/taming.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/tempest.xml" afterPath="$PROJECT_DIR$/xmlFiles/tempest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/timon.xml" afterPath="$PROJECT_DIR$/xmlFiles/timon.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/titus.xml" afterPath="$PROJECT_DIR$/xmlFiles/titus.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/troilus.xml" afterPath="$PROJECT_DIR$/xmlFiles/troilus.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/two_gent.xml" afterPath="$PROJECT_DIR$/xmlFiles/two_gent.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/win_tale.xml" afterPath="$PROJECT_DIR$/xmlFiles/win_tale.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Citator_FX.iws" />
@@ -71,8 +31,8 @@
       <file leaf-file-name="Parse.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/Parse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6272">
-              <caret line="86" column="86" selection-start-line="86" selection-start-column="86" selection-end-line="86" selection-end-column="86" />
+            <state vertical-scroll-proportion="0.47563806">
+              <caret line="123" column="42" selection-start-line="123" selection-start-column="42" selection-end-line="123" selection-end-column="42" />
               <folding>
                 <element signature="method#stringEquals#0;class#Parse#0" expanded="false" />
                 <element signature="method#findChildNodesByName#0;class#Parse#0" expanded="false" />
@@ -81,11 +41,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Line.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/Line.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Speech.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/Speech.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="hamlet.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xmlFiles/hamlet.xml">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="18.88889">
+              <caret line="423" column="47" selection-start-line="423" selection-start-column="36" selection-end-line="423" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StageDirection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/application/StageDirection.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3692" column="31" selection-start-line="3692" selection-start-column="31" selection-end-line="3692" selection-end-column="31" />
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -118,11 +108,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/application/FXUtilities.java" />
         <option value="$PROJECT_DIR$/hamlet.xml" />
-        <option value="$PROJECT_DIR$/src/application/Line.java" />
         <option value="$PROJECT_DIR$/src/application/SceneArea.java" />
         <option value="$PROJECT_DIR$/src/application/Main.java" />
         <option value="$PROJECT_DIR$/src/application/Act.java" />
         <option value="$PROJECT_DIR$/src/application/Scene.java" />
+        <option value="$PROJECT_DIR$/src/application/Line.java" />
         <option value="$PROJECT_DIR$/src/application/Parse.java" />
       </list>
     </option>
@@ -145,6 +135,49 @@
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="722" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Class structureJava</id>
+          </State>
+          <State>
+            <id>Cloning issuesJava</id>
+          </State>
+          <State>
+            <id>Code style issuesJava</id>
+          </State>
+          <State>
+            <id>ImportsJava</id>
+          </State>
+          <State>
+            <id>Inheritance issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Logging issuesJava</id>
+          </State>
+          <State>
+            <id>Memory issuesJava</id>
+          </State>
+          <State>
+            <id>Serialization issuesJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Ant inspections</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -241,7 +274,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -352,7 +385,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="722" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -361,14 +394,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32802126" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32802126" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32771823" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2159265" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29709035" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -419,11 +452,12 @@
     <MESSAGE value="Finished parsing code." />
     <MESSAGE value="Added XML files to git repository" />
     <MESSAGE value="Fixed issue where acts and lines would accumulate." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issue where acts and lines would accumulate." />
+    <MESSAGE value="Fixing issue where stage directions can be inside any level of node." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing issue where stage directions can be inside any level of node." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -505,22 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Line.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18896551">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xmlFiles/hen_iv_1.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -540,18 +558,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xmlFiles/hamlet.xml">
+    <entry file="file://$PROJECT_DIR$/src/application/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1904">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/StageDirection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3692" column="31" selection-start-line="3692" selection-start-column="31" selection-end-line="3692" selection-end-column="31" />
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Line.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/Speech.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xmlFiles/hamlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="18.88889">
+          <caret line="423" column="47" selection-start-line="423" selection-start-column="36" selection-end-line="423" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/Parse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6272">
-          <caret line="86" column="86" selection-start-line="86" selection-start-column="86" selection-end-line="86" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.47563806">
+          <caret line="123" column="42" selection-start-line="123" selection-start-column="42" selection-end-line="123" selection-end-column="42" />
           <folding>
             <element signature="method#stringEquals#0;class#Parse#0" expanded="false" />
             <element signature="method#findChildNodesByName#0;class#Parse#0" expanded="false" />

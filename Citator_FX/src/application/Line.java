@@ -29,4 +29,6 @@ public abstract class Line {
     public void setActNumber(String actNumber) {
         this.actNumber = actNumber;
     }
+
+    abstract String getText();
 }
