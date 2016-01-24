@@ -10,6 +10,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,7 +32,7 @@ public class ReaderController {
     private Label playNameText;
 
     @FXML
-    private TextArea textArea;
+    private WebView webView;
 
     @FXML
     private TreeView treeView;
@@ -90,6 +92,11 @@ public class ReaderController {
         treeView.getSelectionModel().select(root.getChildren().get(0).getChildren().get(0));
         sceneIndex = 0;
         changeScene(sceneIndex);
+
+        // Init the webView
+        WebEngine webEngine = webView.getEngine();
+        webView.get
+        webEngine.load("http://mySite.com"); // TODO: use a local path here
     }
 
     private List<Scene> generateSceneList(List<Act> acts, List<Scene> sceneList) {
@@ -98,20 +105,6 @@ public class ReaderController {
             scenes.addAll(a.getScenes());
         }
         return scenes;
-    }
-
-    private void nextScene() {
-        if(sceneIndex < sceneList.size() - 1) {
-            sceneIndex++;
-            changeScene(sceneIndex);
-        }
-    }
-
-    private void lastScene() {
-        if(sceneIndex > 1) {
-            sceneIndex--;
-            changeScene(sceneIndex);
-        }
     }
 
     public static String getSpaces(int n) {
@@ -132,26 +125,6 @@ public class ReaderController {
         StringBuilder txt = new StringBuilder().append("Act ").append(nextScene.getActNumber()).append(", ").append(nextScene.getTitle()).append("\n\n");
         System.out.flush();
         for (Line l : nextScene.getLines()) {
-//
-//            if (l.isSpeech()) {
-//                // TODO: use String.format to keep the line number right-justfied
-//                Speech speech = (Speech) l;
-//
-//                // If the speaker is new, print their name
-//                String speaker = speech.getSpeaker();
-//                if(!speaker.equals(lastSpeaker)) {
-//                    txt += speaker;
-//                    lastSpeaker = speaker;
-//                }
-//                txt += "\n" + speech.getText();
-//                txt += "  " + speech.getLineNumber();
-//                txt += "\n";
-//            } else {
-//                StageDirection stageDirection = (StageDirection) l;
-//                txt += stageDirection.getText() + "   " + stageDirection.getLineNumber() + "\n";
-//            }
-//            txt += "\n";
-
             if (l.isSpeech()) {
                 Speech speech = (Speech) l;
                 if (lastSpeaker.equals(speech.getSpeaker())) {

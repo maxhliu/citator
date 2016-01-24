@@ -11,6 +11,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.web.WebView?>
 <BorderPane fx:controller="application.ReaderController"
           xmlns:fx="http://javafx.com/fxml" >
 
@@ -40,7 +41,7 @@
     <center>
         <StackPane>
             <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
-            <TextArea fx:id="textArea" editable="false" wrapText="true" onKeyReleased="#onKeyReleased"></TextArea>
+            <WebView fx:id="webView" editable="false" onKeyReleased="#onKeyReleased"></WebView>
         </StackPane>
     </center>
 </BorderPane>
