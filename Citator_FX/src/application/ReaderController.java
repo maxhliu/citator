@@ -179,11 +179,11 @@ public class ReaderController {
             }
 
             // Edit the selected string: add slashes for line #s, and remove extravagant white spaces
-            selected = selected.replace("\n", " \\ "); // replace new-lines with backslashes
+            selected = selected.replace("\n", " / "); // replace new-lines with backslashes
             selected = selected.replaceAll("\\s+"," "); // remove consecutive spaces
 
             String edited = "\"" + selected + "\" (" + selectedScene.getActNumber() + "."
-                    + selectedScene.getSceneNumber() + "." + lineNumTxt + ")"; // TODO
+                    + selectedScene.getSceneNumber().toLowerCase() + "." + lineNumTxt + ")"; // TODO
             ClipboardContent content = new ClipboardContent();
             content.putString(edited);
             content.putHtml("bold: <b>" + edited + "</b>");

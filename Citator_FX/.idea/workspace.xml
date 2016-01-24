@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a69aff8-8efa-4264-b045-c7c6bd5db1f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/application/shakes_pear.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/application/Main.class" afterPath="$PROJECT_DIR$/bin/application/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Main.java" afterPath="$PROJECT_DIR$/src/application/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/ReaderController.java" afterPath="$PROJECT_DIR$/src/application/ReaderController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/application/application.css" afterPath="$PROJECT_DIR$/bin/application/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/library_view.fxml" afterPath="$PROJECT_DIR$/src/application/library_view.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/reader.fxml" afterPath="$PROJECT_DIR$/src/application/reader.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Citator_FX.iws" />
@@ -86,8 +80,8 @@
       <file leaf-file-name="ReaderController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/ReaderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62007874">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.52755904">
+              <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -678,11 +672,17 @@
       <option name="project" value="LOCAL" />
       <updated>1453615916962</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Merge branches 'parse' and 'ui' of https://github.com/matresscow/citator into ui&#10;&#10;# Conflicts:&#10;#&#9;Citator_FX/.idea/workspace.xml&#10;">
+      <created>1453636789624</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1453636789624</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50737000" />
+    <option name="totallyTimeSpent" value="51034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1159,8 +1159,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/ReaderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62007874">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.52755904">
+          <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
