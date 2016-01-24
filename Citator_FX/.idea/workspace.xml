@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a69aff8-8efa-4264-b045-c7c6bd5db1f5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/ReaderController.java" afterPath="$PROJECT_DIR$/src/application/ReaderController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/application/application.css" afterPath="$PROJECT_DIR$/bin/application/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/application.css" afterPath="$PROJECT_DIR$/src/application/application.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Citator_FX.iws" />
@@ -77,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReaderController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReaderController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/ReaderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52755904">
+            <state vertical-scroll-proportion="-9.925926">
               <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -89,13 +90,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/application/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.22429906">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
-                <marker date="1453630103000" expanded="true" signature="109:158" placeholder="{...}" />
+                <marker date="1453638003000" expanded="true" signature="109:158" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -170,11 +171,11 @@
         <option value="$PROJECT_DIR$/src/application/Parse.java" />
         <option value="$PROJECT_DIR$/src/application/FXUtilities.java" />
         <option value="$PROJECT_DIR$/src/application/LibraryController.java" />
-        <option value="$PROJECT_DIR$/src/application/application.css" />
         <option value="$PROJECT_DIR$/src/application/Main.java" />
         <option value="$PROJECT_DIR$/src/application/library_view.fxml" />
         <option value="$PROJECT_DIR$/src/application/reader.fxml" />
         <option value="$PROJECT_DIR$/src/application/ReaderController.java" />
+        <option value="$PROJECT_DIR$/src/application/application.css" />
       </list>
     </option>
   </component>
@@ -678,11 +679,17 @@
       <option name="project" value="LOCAL" />
       <updated>1453636789624</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Merge branches 'parse' and 'ui' of https://github.com/matresscow/citator into ui&#10;&#10;# Conflicts:&#10;#&#9;Citator_FX/.idea/workspace.xml&#10;">
+      <created>1453637531724</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1453637531724</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51034000" />
+    <option name="totallyTimeSpent" value="51540000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -751,7 +758,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
           <folding>
-            <marker date="1453630103000" expanded="true" signature="109:158" placeholder="{...}" />
+            <marker date="1453638003000" expanded="true" signature="109:158" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -829,7 +836,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
           <folding>
-            <marker date="1453630103000" expanded="true" signature="109:158" placeholder="{...}" />
+            <marker date="1453638003000" expanded="true" signature="109:158" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1111,16 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/application/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <marker date="1453630103000" expanded="true" signature="109:158" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/application/library_view.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1159,10 +1156,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/ReaderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52755904">
+        <state vertical-scroll-proportion="-9.925926">
           <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22429906">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1453638003000" expanded="true" signature="109:158" placeholder="{...}" />
           </folding>
         </state>
       </provider>

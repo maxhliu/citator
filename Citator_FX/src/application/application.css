@@ -3,8 +3,8 @@
 .root {
     -fx-font-size: 12pt;
     -fx-font-family: "Consolas";
-    /*-fx-base: rgb(50, 50, 50);
-    -fx-background-color: lightsteelblue; */
+    -fx-text-fill: #39464E;
+    -fx-background-color: #F5F5F5;
 }
 
 #stackpane {
