@@ -2,7 +2,7 @@
 
 .root {
     -fx-font-size: 12pt;
-    -fx-font-family: "Helvetica Neue";
+    -fx-font-family: "Consolas";
     -fx-base: rgb(50, 50, 50);
     -fx-background-color: lightsteelblue;
 }

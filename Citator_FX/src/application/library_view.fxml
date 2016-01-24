@@ -15,7 +15,7 @@
         <Label text="(Stage Direction) Shakes Pear Maniacally" alignment="center"></Label>
     </top>
     <center>
-        <VBox spacing="10" alignment="center" padding="">
+        <VBox spacing="10" alignment="center">
             <ListView fx:id="bookList" editable="false"></ListView>
             <Button text="Read" onAction="#selectBook"></Button>
         </VBox>
