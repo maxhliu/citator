@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.Button?>
-<BorderPane fx:controller="application.RootController"
+<BorderPane fx:controller="application.ReaderController"
           xmlns:fx="http://javafx.com/fxml">
 
     <top>

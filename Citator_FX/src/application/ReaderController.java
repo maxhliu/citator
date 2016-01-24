@@ -64,7 +64,6 @@ public class ReaderController {
         treeView.getSelectionModel().selectFirst();
         treeView.setEditable(false);
 
-        //
         sceneList = generateSceneList(acts, sceneList);
 
         // Start the textview at the first scene
@@ -99,18 +98,26 @@ public class ReaderController {
         Scene nextScene = sceneList.get(newIndex);
 
         // Set the txt to the scene text
+        String lastSpeacker = null;
         String txt = "Act " + nextScene.getActNumber() + ", " + nextScene.getTitle() + "\n\n";
         System.out.flush();
         for (Line l : nextScene.getLines()) {
             if (l.isSpeech()) {
                 // TODO: use String.format to keep the line number right-justfied
                 Speech speech = (Speech) l;
-                txt += speech.getSpeaker();
+
+                // If the speaker is new, print their name
+                String speaker = speech.getSpeaker();
+                if(!speaker.equals(lastSpeacker)) {
+                    txt += speaker;
+                    lastSpeacker = speaker;
+                }
                 txt += "\n" + speech.getText();
                 txt += "  " + speech.getLineNumber();
+                txt += "\n";
             } else {
                 StageDirection stageDirection = (StageDirection) l;
-                txt += stageDirection.getText() + "   " + stageDirection.getLineNumber();
+                txt += stageDirection.getText() + "   " + stageDirection.getLineNumber() + "\n";
             }
             txt += "\n";
         }

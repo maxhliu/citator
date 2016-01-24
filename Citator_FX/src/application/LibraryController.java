@@ -1,7 +1,6 @@
 package application;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,6 +47,15 @@ public class LibraryController {
                 Element root = doc.getDocumentElement();
                 assert root.getFirstChild().getNodeName().equals("TITLE");
                 String playName = root.getElementsByTagName("PLAYSUBT").item(0).getTextContent();
+
+//                // Convert to camel case
+//                String[] parts = playName.split(" ");
+//                for(String p : parts) {
+//                    if(p.equals("OF")) {
+//
+//                    }
+//                }
+
                 playNames.add(playName);
                 playNameToFilename.put(playName, nameParts[0]);
             }
@@ -62,10 +70,10 @@ public class LibraryController {
             String playName = bookList.getSelectionModel().getSelectedItem();
             String fileName = playNameToFilename.get(playName);
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("root.fxml"));
-            RootController rc = loader.<RootController>getController();
-            rc.setPlayName(playName);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("reader.fxml"));
             Pane readPane = (Pane) loader.load();
+            ReaderController rc = loader.<ReaderController>getController();
+            rc.initViewer(playName, fileName);
             Main.scene.setRoot(readPane);
         }
     }
