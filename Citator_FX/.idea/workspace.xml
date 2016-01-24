@@ -1,53 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a69aff8-8efa-4264-b045-c7c6bd5db1f5" name="Default" comment="Added unformatted xml files">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/application/Line.class" afterPath="$PROJECT_DIR$/bin/application/Line.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/application/Scene.class" afterPath="$PROJECT_DIR$/bin/application/Scene.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Line.java" afterPath="$PROJECT_DIR$/src/application/Line.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Parse.java" afterPath="$PROJECT_DIR$/src/application/Parse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/application/Scene.java" afterPath="$PROJECT_DIR$/src/application/Scene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/a_and_c.xml" afterPath="$PROJECT_DIR$/xmlFiles/a_and_c.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/all_well.xml" afterPath="$PROJECT_DIR$/xmlFiles/all_well.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/as_you.xml" afterPath="$PROJECT_DIR$/xmlFiles/as_you.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/com_err.xml" afterPath="$PROJECT_DIR$/xmlFiles/com_err.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/coriolan.xml" afterPath="$PROJECT_DIR$/xmlFiles/coriolan.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/cymbelin.xml" afterPath="$PROJECT_DIR$/xmlFiles/cymbelin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/dream.xml" afterPath="$PROJECT_DIR$/xmlFiles/dream.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/dsssl.dtd" afterPath="$PROJECT_DIR$/xmlFiles/dsssl.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/fot.dtd" afterPath="$PROJECT_DIR$/xmlFiles/fot.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hamlet.xml" afterPath="$PROJECT_DIR$/xmlFiles/hamlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_iv_1.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_iv_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_iv_2.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_iv_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_v.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_v.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_vi_1.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_vi_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_vi_2.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_vi_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_vi_3.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_vi_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/hen_viii.xml" afterPath="$PROJECT_DIR$/xmlFiles/hen_viii.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/j_caesar.xml" afterPath="$PROJECT_DIR$/xmlFiles/j_caesar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/john.xml" afterPath="$PROJECT_DIR$/xmlFiles/john.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/lear.xml" afterPath="$PROJECT_DIR$/xmlFiles/lear.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/lll.xml" afterPath="$PROJECT_DIR$/xmlFiles/lll.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/m_for_m.xml" afterPath="$PROJECT_DIR$/xmlFiles/m_for_m.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/m_wives.xml" afterPath="$PROJECT_DIR$/xmlFiles/m_wives.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/macbeth.xml" afterPath="$PROJECT_DIR$/xmlFiles/macbeth.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/merchant.xml" afterPath="$PROJECT_DIR$/xmlFiles/merchant.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/much_ado.xml" afterPath="$PROJECT_DIR$/xmlFiles/much_ado.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/othello.xml" afterPath="$PROJECT_DIR$/xmlFiles/othello.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/pericles.xml" afterPath="$PROJECT_DIR$/xmlFiles/pericles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/play.dtd" afterPath="$PROJECT_DIR$/xmlFiles/play.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/r_and_j.xml" afterPath="$PROJECT_DIR$/xmlFiles/r_and_j.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/rich_ii.xml" afterPath="$PROJECT_DIR$/xmlFiles/rich_ii.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/rich_iii.xml" afterPath="$PROJECT_DIR$/xmlFiles/rich_iii.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/style-sheet.dtd" afterPath="$PROJECT_DIR$/xmlFiles/style-sheet.dtd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/t_night.xml" afterPath="$PROJECT_DIR$/xmlFiles/t_night.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/taming.xml" afterPath="$PROJECT_DIR$/xmlFiles/taming.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/tempest.xml" afterPath="$PROJECT_DIR$/xmlFiles/tempest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/timon.xml" afterPath="$PROJECT_DIR$/xmlFiles/timon.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/titus.xml" afterPath="$PROJECT_DIR$/xmlFiles/titus.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/troilus.xml" afterPath="$PROJECT_DIR$/xmlFiles/troilus.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/two_gent.xml" afterPath="$PROJECT_DIR$/xmlFiles/two_gent.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xmlFiles/win_tale.xml" afterPath="$PROJECT_DIR$/xmlFiles/win_tale.xml" />
+    <list default="true" id="7a69aff8-8efa-4264-b045-c7c6bd5db1f5" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/application/Line.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/application/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/application/Scene.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Citator_FX.iws" />
@@ -71,11 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Parse.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Parse.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application/Parse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29927006">
-              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LibraryController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/application/LibraryController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.43065694">
+              <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -367,7 +334,7 @@
     </configuration>
     <configuration default="false" name="Unnamed" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="application.Main" />
+      <option name="MAIN_CLASS_NAME" value="application.Parse" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -428,7 +395,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="722" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -488,6 +455,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Max wanted me to push" />
     <MESSAGE value="Extended TextArea to accomodate Acts" />
     <MESSAGE value="Added unformatted xml files" />
@@ -637,8 +606,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/application/Parse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29927006">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application/LibraryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43065694">
+          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
           <folding />
         </state>
       </provider>
